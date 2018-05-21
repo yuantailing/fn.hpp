@@ -28,6 +28,10 @@ int main() {
   cout << endl;
   // Expected: 9 8 7 6 5
 
+  auto foo = _1[0] + _1[2] + _1[4];
+  cout << foo(a) << endl;
+  // Expected: 21
+
   return 0;
 }
 ```
