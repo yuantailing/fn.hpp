@@ -1,4 +1,4 @@
-# fn.hpp [draft]
+# fn.hpp [withdrew]
 A funny way to write lambda-like expressions.
 
 This project is inspired by [fn.py](https://github.com/kachayev/fn.py).
@@ -7,6 +7,7 @@ This project is inspired by [fn.py](https://github.com/kachayev/fn.py).
 
 ```cpp
 #include <iostream>   // std::cout, std::endl
+#include <vector>     // std::vector
 #include <algorithm>  // std::count_if, std::sort
 #include "fn.hpp"     // fn::_
 
@@ -18,11 +19,11 @@ int main() {
   cout << add(1, 2) << endl;
   // Expected: 3
 
-  int a[5] = {5, 6, 7, 8, 9};
-  cout << count_if(a, a + 5, _ % 2 == 0) << endl;
+  vector<int> a = {5, 6, 7, 8, 9};
+  cout << count_if(a.begin(), a.end(), _ % 2 == 0) << endl;
   // Expected: 2
 
-  sort(a, a + 5, _ > _);
+  sort(a.begin(), a.end(), _ > _);
   for (auto x: a)
     cout << x << " ";
   cout << endl;
@@ -35,3 +36,7 @@ int main() {
   return 0;
 }
 ```
+
+## Withdrew
+
+I rack my brain and discussed with friends but cannot implement it now.
