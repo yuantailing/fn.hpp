@@ -7,6 +7,7 @@ This project is inspired by [fn.py](https://github.com/kachayev/fn.py).
 
 ```cpp
 #include <iostream>   // std::cout, std::endl
+#include <string>     // std::string
 #include <vector>     // std::vector
 #include <algorithm>  // std::count_if, std::sort
 #include "fn.hpp"     // fn::_
@@ -18,6 +19,9 @@ int main() {
   auto add = _ + _;
   cout << add(1, 2) << endl;
   // Expected: 3
+
+  cout << add(string("Hello"), " World!") << endl;
+  // Expected: Hello World!
 
   vector<int> a = {5, 6, 7, 8, 9};
   cout << count_if(a.begin(), a.end(), _ % 2 == 0) << endl;
